@@ -1,6 +1,7 @@
+
 body {
-  font-family: 'Roboto', sans-serif;
-  background-color: #f2f2f2;
+  font-family: 'Poppins', sans-serif;
+  background-color: #eef2f3;
   margin: 0;
   padding: 0;
   display: flex;
@@ -10,89 +11,111 @@ body {
   color: #333;
 }
 
+/* Header */
 h1 {
-  font-size: 32px;
-  color: #333;
-  margin-bottom: 20px;
-  font-weight: 700;
+  font-size: 30px;
   text-align: center;
-  letter-spacing: 1px;
+  color: #4caf50;
+  margin-bottom: 20px;
+  font-weight: bold;
+  opacity: 0;
+  animation: fadeIn 1s forwards;
 }
 
 /* Form container */
 .form-container {
   background: #fff;
-  padding: 40px 30px;
-  border-radius: 12px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  padding: 40px;
+  border-radius: 15px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
   width: 100%;
-  max-width: 420px;
+  max-width: 380px;
   text-align: center;
-  transition: all 0.3s ease-in-out;
+  opacity: 0;
+  animation: fadeIn 1s 0.5s forwards;
 }
 
-.form-container:hover {
-  box-shadow: 0 12px 20px rgba(0, 0, 0, 0.15);
+/* Fade-in effect for elements */
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }
 
 label {
   font-size: 18px;
   color: #555;
   display: block;
-  margin-bottom: 10px;
-  font-weight: 600;
+  margin-bottom: 12px;
+  font-weight: 500;
+  opacity: 0;
+  animation: slideUp 0.5s 1s forwards;
 }
 
 input[type="text"] {
   width: 100%;
   padding: 15px;
   margin: 10px 0 20px;
-  border-radius: 10px;
+  border-radius: 8px;
   border: 2px solid #ddd;
   font-size: 16px;
-  background-color: #fafafa;
-  transition: 0.3s ease;
+  background-color: #f4f7fa;
+  transition: all 0.4s ease;
+  opacity: 0;
+  animation: slideUp 0.5s 1.5s forwards;
+}
+
+@keyframes slideUp {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 input[type="text"]:focus {
   border-color: #4caf50;
-  outline: none;
   background-color: #e8f5e9;
-  box-shadow: 0 0 8px rgba(76, 175, 80, 0.3);
+  box-shadow: 0 0 10px rgba(76, 175, 80, 0.3);
 }
 
 button {
   padding: 15px 30px;
   background-color: #4caf50;
   border: none;
-  border-radius: 10px;
+  border-radius: 8px;
   color: white;
   font-size: 18px;
   font-weight: 600;
   cursor: pointer;
-  transition: all 0.3s ease;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  opacity: 0;
+  animation: slideUp 0.5s 2s forwards;
 }
 
 button:hover {
-  background-color: #45a049;
-  transform: translateY(-2px);
-  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.15);
+  transform: scale(1.05);
 }
 
 button:active {
-  transform: translateY(0);
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  transform: scale(1);
 }
 
 /* Responsive design */
 @media (max-width: 500px) {
   .form-container {
-    padding: 25px 20px;
+    padding: 25px;
   }
 
   h1 {
-    font-size: 28px;
+    font-size: 24px;
   }
 
   input[type="text"], button {
