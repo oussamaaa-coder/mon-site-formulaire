@@ -1,7 +1,7 @@
-
+/* Style global */
 body {
-  font-family: 'Poppins', sans-serif;
-  background-color: #eef2f3;
+  font-family: 'Arial', sans-serif;
+  background-color: #f9f9f9;
   margin: 0;
   padding: 0;
   display: flex;
@@ -11,114 +11,66 @@ body {
   color: #333;
 }
 
-/* Header */
-h1 {
-  font-size: 30px;
+/* Conteneur du formulaire */
+.form-container {
+  background-color: #fff;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 400px;
   text-align: center;
+}
+
+/* Titre */
+h1 {
+  font-size: 24px;
   color: #4caf50;
   margin-bottom: 20px;
-  font-weight: bold;
-  opacity: 0;
-  animation: fadeIn 1s forwards;
 }
 
-/* Form container */
-.form-container {
-  background: #fff;
-  padding: 40px;
-  border-radius: 15px;
-  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
-  width: 100%;
-  max-width: 380px;
-  text-align: center;
-  opacity: 0;
-  animation: fadeIn 1s 0.5s forwards;
-}
-
-/* Fade-in effect for elements */
-@keyframes fadeIn {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
-}
-
+/* Style des labels */
 label {
-  font-size: 18px;
-  color: #555;
   display: block;
-  margin-bottom: 12px;
-  font-weight: 500;
-  opacity: 0;
-  animation: slideUp 0.5s 1s forwards;
+  font-size: 16px;
+  margin-bottom: 8px;
+  color: #555;
 }
 
+/* Style des champs de texte */
 input[type="text"] {
   width: 100%;
-  padding: 15px;
-  margin: 10px 0 20px;
-  border-radius: 8px;
+  padding: 12px;
+  margin-bottom: 20px;
+  border-radius: 5px;
   border: 2px solid #ddd;
   font-size: 16px;
-  background-color: #f4f7fa;
-  transition: all 0.4s ease;
-  opacity: 0;
-  animation: slideUp 0.5s 1.5s forwards;
-}
-
-@keyframes slideUp {
-  0% {
-    opacity: 0;
-    transform: translateY(20px);
-  }
-  100% {
-    opacity: 1;
-    transform: translateY(0);
-  }
+  background-color: #f7f7f7;
+  transition: border-color 0.3s ease, background-color 0.3s ease;
 }
 
 input[type="text"]:focus {
   border-color: #4caf50;
   background-color: #e8f5e9;
-  box-shadow: 0 0 10px rgba(76, 175, 80, 0.3);
+  outline: none;
 }
 
+/* Style du bouton */
 button {
-  padding: 15px 30px;
+  padding: 12px 24px;
   background-color: #4caf50;
   border: none;
-  border-radius: 8px;
+  border-radius: 5px;
   color: white;
-  font-size: 18px;
-  font-weight: 600;
+  font-size: 16px;
   cursor: pointer;
-  transition: transform 0.3s ease;
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-  opacity: 0;
-  animation: slideUp 0.5s 2s forwards;
+  transition: background-color 0.3s ease;
 }
 
 button:hover {
-  transform: scale(1.05);
+  background-color: #45a049;
 }
 
 button:active {
-  transform: scale(1);
-}
-
-/* Responsive design */
-@media (max-width: 500px) {
-  .form-container {
-    padding: 25px;
-  }
-
-  h1 {
-    font-size: 24px;
-  }
-
-  input[type="text"], button {
-    font-size: 14px;
-  }
+  background-color: #388e3c;
 }
